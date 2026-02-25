@@ -6,32 +6,56 @@ export default function VaultcrestLogo({ className = 'w-8 h-8' }) {
             xmlns="http://www.w3.org/2000/svg"
             className={className}
         >
-            {/* Outer shield shape */}
-            <path
-                d="M20 2L4 10V22C4 31.5 11 37 20 39C29 37 36 31.5 36 22V10L20 2Z"
-                stroke="url(#logoGrad)"
-                strokeWidth="2"
-                fill="none"
+            {/* Background rounded square */}
+            <rect
+                x="2" y="2" width="36" height="36" rx="10"
+                fill="url(#logoBg)"
+                opacity="0.15"
             />
-            {/* Inner vault door */}
-            <circle
-                cx="20"
-                cy="20"
-                r="9"
-                stroke="url(#logoGrad)"
+            <rect
+                x="2" y="2" width="36" height="36" rx="10"
+                stroke="url(#logoStroke)"
                 strokeWidth="1.5"
                 fill="none"
             />
-            {/* Vault handle / crosshair */}
-            <line x1="20" y1="14" x2="20" y2="26" stroke="url(#logoGrad)" strokeWidth="1.5" />
-            <line x1="14" y1="20" x2="26" y2="20" stroke="url(#logoGrad)" strokeWidth="1.5" />
-            {/* Center keyhole dot */}
-            <circle cx="20" cy="20" r="2.5" fill="url(#logoGrad)" />
-            {/* Corner accents */}
-            <path d="M20 5L8 11.5" stroke="url(#logoGrad)" strokeWidth="1" opacity="0.4" />
-            <path d="M20 5L32 11.5" stroke="url(#logoGrad)" strokeWidth="1" opacity="0.4" />
+            {/* Stylized V with upward growth arrow */}
+            <path
+                d="M11 12L20 28L25 18"
+                stroke="url(#logoMain)"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+            />
+            <path
+                d="M25 18L29 10"
+                stroke="url(#logoMain)"
+                strokeWidth="3"
+                strokeLinecap="round"
+                fill="none"
+            />
+            {/* Arrow head on top-right */}
+            <path
+                d="M26 9L30 9L30 13.5"
+                stroke="url(#logoMain)"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+            />
+            {/* Small dot accents — data points */}
+            <circle cx="15" cy="20" r="1.5" fill="url(#logoMain)" opacity="0.5" />
+            <circle cx="22" cy="14" r="1.5" fill="url(#logoMain)" opacity="0.35" />
             <defs>
-                <linearGradient id="logoGrad" x1="4" y1="2" x2="36" y2="39" gradientUnits="userSpaceOnUse">
+                <linearGradient id="logoBg" x1="2" y1="2" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#007BFF" />
+                    <stop offset="1" stopColor="#00D4FF" />
+                </linearGradient>
+                <linearGradient id="logoStroke" x1="2" y1="2" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#007BFF" stopOpacity="0.5" />
+                    <stop offset="1" stopColor="#00D4FF" stopOpacity="0.3" />
+                </linearGradient>
+                <linearGradient id="logoMain" x1="11" y1="28" x2="30" y2="9" gradientUnits="userSpaceOnUse">
                     <stop stopColor="#007BFF" />
                     <stop offset="1" stopColor="#00D4FF" />
                 </linearGradient>
