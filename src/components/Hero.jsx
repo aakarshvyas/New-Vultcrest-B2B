@@ -163,7 +163,7 @@ export default function Hero() {
                         style={{ borderColor: 'var(--border-color)' }}
                     >
                         {[
-                            { icon: TrendingUp, value: 5000, suffix: '+', label: 'Leads Generated' },
+                            { icon: TrendingUp, value: 2250, suffix: '+', label: 'Leads Generated' },
                             { icon: Users, value: 5, suffix: '+', label: 'B2B Clients' },
                             { icon: Zap, value: 98, suffix: '%', label: 'Inbox Placement' },
                         ].map((stat) => (

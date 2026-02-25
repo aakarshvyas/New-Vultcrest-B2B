@@ -92,7 +92,7 @@ export default function TrustSection() {
                             </span>
                         </div>
                         <div className="text-4xl sm:text-5xl font-black text-gradient">
-                            <AnimatedNumber target={5000} /><span className="text-gradient">+</span>
+                            <AnimatedNumber target={2250} /><span className="text-gradient">+</span>
                         </div>
                         <div className="mt-2 flex items-center justify-center gap-1">
                             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
