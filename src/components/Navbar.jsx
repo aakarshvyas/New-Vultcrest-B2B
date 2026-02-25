@@ -6,7 +6,6 @@ import { Menu, X, Sun, Moon, Shield } from 'lucide-react';
 const navLinks = [
     { name: 'Services', href: '#services' },
     { name: 'Process', href: '#process' },
-    { name: 'Results', href: '#trust' },
 ];
 
 export default function Navbar() {

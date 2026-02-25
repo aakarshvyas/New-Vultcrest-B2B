@@ -5,8 +5,8 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import SampleMessages from './components/SampleMessages';
 import VaultProcess from './components/VaultProcess';
-import TrustSection from './components/TrustSection';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -19,11 +19,11 @@ function App() {
           <Services />
           <SampleMessages />
           <VaultProcess />
-          <TrustSection />
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 
