@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import SampleMessages from './components/SampleMessages';
 import VaultProcess from './components/VaultProcess';
+import SuccessStories from './components/SuccessStories';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -19,6 +20,7 @@ function App() {
           <Services />
           <SampleMessages />
           <VaultProcess />
+          <SuccessStories />
         </main>
         <Footer />
         <ScrollToTop />
