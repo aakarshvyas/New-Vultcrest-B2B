@@ -1,4 +1,5 @@
-import { Shield, Mail, Linkedin, MapPin, ArrowUpRight, Calendar } from 'lucide-react';
+import { Mail, Linkedin, MapPin, ArrowUpRight, Calendar } from 'lucide-react';
+import VaultcrestLogo from './VaultcrestLogo';
 
 const CAL_LINK = 'https://cal.com/pratham.singh/30min';
 
@@ -10,7 +11,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="sm:col-span-2 lg:col-span-1">
                         <a href="#" className="flex items-center gap-2 mb-4 group">
-                            <Shield className="w-7 h-7 text-azure" strokeWidth={2} />
+                            <VaultcrestLogo className="w-7 h-7" />
                             <span className="text-lg font-bold tracking-tight">
                                 <span className="text-gradient">Vault</span>
                                 <span style={{ color: 'var(--text-primary)' }}>crest</span>

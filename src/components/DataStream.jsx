@@ -3,7 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 
 export default function DataStream() {
     const canvasRef = useRef(null);
-    const { isDark } = useTheme();
+    const { theme } = useTheme();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -50,7 +50,7 @@ export default function DataStream() {
                 // Draw particle
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = isDark
+                ctx.fillStyle = theme === 'dark'
                     ? `rgba(0, 123, 255, ${p.opacity})`
                     : `rgba(0, 123, 255, ${p.opacity * 0.6})`;
                 ctx.fill();
@@ -63,7 +63,7 @@ export default function DataStream() {
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = isDark
+                        ctx.strokeStyle = theme === 'dark'
                             ? `rgba(0, 123, 255, ${0.08 * (1 - dist / 120)})`
                             : `rgba(0, 123, 255, ${0.04 * (1 - dist / 120)})`;
                         ctx.lineWidth = 0.5;
@@ -81,7 +81,7 @@ export default function DataStream() {
             cancelAnimationFrame(animationId);
             window.removeEventListener('resize', resize);
         };
-    }, [isDark]);
+    }, [theme]);
 
     return (
         <canvas

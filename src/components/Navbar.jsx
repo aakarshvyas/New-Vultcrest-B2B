@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
-import { Menu, X, Sun, Moon, Shield } from 'lucide-react';
+import { Sun, Moon, Menu, X, Monitor } from 'lucide-react';
+import VaultcrestLogo from './VaultcrestLogo';
 
 const navLinks = [
     { name: 'Services', href: '#services' },
@@ -9,7 +10,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    const { isDark, toggleTheme } = useTheme();
+    const { mode, cycleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -18,6 +19,14 @@ export default function Navbar() {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
+
+    const themeIcon = () => {
+        if (mode === 'dark') return <Moon className="w-5 h-5 text-slate-300" />;
+        if (mode === 'light') return <Sun className="w-5 h-5 text-yellow-400" />;
+        return <Monitor className="w-5 h-5 text-azure" />;
+    };
+
+    const themeLabel = mode === 'system' ? 'System' : mode === 'dark' ? 'Dark' : 'Light';
 
     return (
         <motion.nav
@@ -40,7 +49,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-2 group">
                         <div className="relative">
-                            <Shield className="w-8 h-8 text-azure" strokeWidth={2} />
+                            <VaultcrestLogo className="w-7 h-7" />
                             <div className="absolute inset-0 bg-azure/20 rounded-full blur-md group-hover:bg-azure/30 transition-all" />
                         </div>
                         <span className="text-xl font-bold tracking-tight">
@@ -67,15 +76,15 @@ export default function Navbar() {
                     <div className="flex items-center gap-3">
                         {/* Theme Toggle */}
                         <button
-                            onClick={toggleTheme}
-                            className="p-2 rounded-lg transition-all hover:bg-azure/10"
-                            aria-label="Toggle theme"
+                            onClick={cycleTheme}
+                            className="p-2 rounded-lg transition-all hover:bg-azure/10 flex items-center gap-1.5"
+                            aria-label={`Theme: ${themeLabel}`}
+                            title={`Theme: ${themeLabel}`}
                         >
-                            {isDark ? (
-                                <Sun className="w-5 h-5 text-yellow-400" />
-                            ) : (
-                                <Moon className="w-5 h-5 text-slate-600" />
-                            )}
+                            {themeIcon()}
+                            <span className="text-xs font-medium hidden sm:inline" style={{ color: 'var(--text-secondary)' }}>
+                                {themeLabel}
+                            </span>
                         </button>
 
                         {/* Desktop CTA */}
