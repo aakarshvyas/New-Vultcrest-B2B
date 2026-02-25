@@ -16,6 +16,10 @@
   --azure-glow: rgba(0, 123, 255, 0.3);
   --glass-bg: rgba(13, 13, 20, 0.4);
   --glass-border: rgba(0, 123, 255, 0.1);
+  --footer-glass-bg: rgba(10, 10, 18, 0.55);
+  --footer-glass-border: rgba(255, 255, 255, 0.08);
+  --footer-glass-highlight: rgba(255, 255, 255, 0.15);
+  --footer-glass-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }
 
 .light {
@@ -29,6 +33,10 @@
   --azure-glow: rgba(0, 123, 255, 0.2);
   --glass-bg: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 123, 255, 0.15);
+  --footer-glass-bg: rgba(240, 243, 250, 0.6);
+  --footer-glass-border: rgba(0, 0, 0, 0.06);
+  --footer-glass-highlight: rgba(255, 255, 255, 0.8);
+  --footer-glass-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
 }
 
 /* ===== BASE ===== */
@@ -56,13 +64,16 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--azure);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #3399ff;
 }
@@ -176,8 +187,13 @@ body {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ===== HORIZONTAL SCROLL ===== */
@@ -250,6 +266,7 @@ input[type="range"]::-moz-range-thumb {
   .section-heading {
     font-size: 1.8rem;
   }
+
   .process-card {
     flex: 0 0 280px;
     min-height: 340px;
@@ -260,6 +277,7 @@ input[type="range"]::-moz-range-thumb {
   .section-heading {
     font-size: 1.5rem;
   }
+
   .process-card {
     flex: 0 0 260px;
     min-height: 320px;

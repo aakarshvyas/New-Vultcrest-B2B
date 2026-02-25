@@ -5,7 +5,31 @@ const CAL_LINK = 'https://cal.com/pratham.singh/30min';
 
 export default function Footer() {
     return (
-        <footer className="relative py-16 sm:py-20 border-t" style={{ borderColor: 'var(--border-color)' }}>
+        <footer
+            className="relative py-16 sm:py-20 overflow-hidden mx-4 sm:mx-6 lg:mx-8 mb-6 rounded-3xl"
+            style={{
+                background: 'var(--footer-glass-bg)',
+                backdropFilter: 'blur(40px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+                borderTop: '1px solid var(--footer-glass-border)',
+            }}
+        >
+            {/* Liquid glass noise overlay */}
+            <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                    background: 'var(--footer-glass-noise)',
+                    mixBlendMode: 'overlay',
+                    opacity: 0.04,
+                }}
+            />
+            {/* Subtle top highlight — the "liquid edge" */}
+            <div
+                className="absolute top-0 left-0 right-0 h-px"
+                style={{
+                    background: 'linear-gradient(90deg, transparent, var(--footer-glass-highlight), transparent)',
+                }}
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
                     {/* Brand */}
