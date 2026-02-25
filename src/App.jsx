@@ -3,6 +3,7 @@ import DataStream from './components/DataStream';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import SampleMessages from './components/SampleMessages';
 import VaultProcess from './components/VaultProcess';
 import TrustSection from './components/TrustSection';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ function App() {
         <main className="relative z-10">
           <Hero />
           <Services />
+          <SampleMessages />
           <VaultProcess />
           <TrustSection />
         </main>

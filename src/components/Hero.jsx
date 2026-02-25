@@ -163,9 +163,9 @@ export default function Hero() {
                         style={{ borderColor: 'var(--border-color)' }}
                     >
                         {[
-                            { icon: TrendingUp, value: 12847, suffix: '+', label: 'Leads Generated' },
-                            { icon: Users, value: 150, suffix: '+', label: 'B2B Clients' },
-                            { icon: Zap, value: 94, suffix: '%', label: 'Inbox Placement' },
+                            { icon: TrendingUp, value: 5000, suffix: '+', label: 'Leads Generated' },
+                            { icon: Users, value: 5, suffix: '+', label: 'B2B Clients' },
+                            { icon: Zap, value: 98, suffix: '%', label: 'Inbox Placement' },
                         ].map((stat) => (
                             <div key={stat.label} className="flex items-center gap-3">
                                 <div className="p-2 rounded-lg bg-azure/10">

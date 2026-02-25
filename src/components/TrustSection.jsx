@@ -92,7 +92,7 @@ export default function TrustSection() {
                             </span>
                         </div>
                         <div className="text-4xl sm:text-5xl font-black text-gradient">
-                            <AnimatedNumber target={12847} />
+                            <AnimatedNumber target={5000} /><span className="text-gradient">+</span>
                         </div>
                         <div className="mt-2 flex items-center justify-center gap-1">
                             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -106,34 +106,34 @@ export default function TrustSection() {
                         <div className="flex items-center justify-center gap-2 mb-3">
                             <Activity className="w-5 h-5 text-azure" />
                             <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
-                                Active Campaigns
+                                Campaigns Created
                             </span>
                         </div>
                         <div className="text-4xl sm:text-5xl font-black text-gradient">
-                            <AnimatedNumber target={340} />
+                            <AnimatedNumber target={200} /><span className="text-gradient">+</span>
                         </div>
                         <div className="mt-2 flex items-center justify-center gap-1">
                             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                            <span className="text-xs font-medium text-emerald-400">Running</span>
+                            <span className="text-xs font-medium text-emerald-400">Live</span>
                         </div>
                     </div>
 
-                    {/* Avg Response Rate */}
+                    {/* Inbox Placement */}
                     <div className="glass-card-hover p-8 text-center relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-azure to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         <div className="flex items-center justify-center gap-2 mb-3">
                             <TrendingUp className="w-5 h-5 text-azure" />
                             <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
-                                Avg Response Rate
+                                Inbox Placement
                             </span>
                         </div>
                         <div className="text-4xl sm:text-5xl font-black text-gradient">
-                            <AnimatedNumber target={32} />
-                            <span>%</span>
+                            <AnimatedNumber target={98} />
+                            <span className="text-gradient">%</span>
                         </div>
                         <div className="mt-2 flex items-center justify-center gap-1">
                             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                            <span className="text-xs font-medium text-emerald-400">Above Industry</span>
+                            <span className="text-xs font-medium text-emerald-400">Guaranteed</span>
                         </div>
                     </div>
                 </motion.div>
